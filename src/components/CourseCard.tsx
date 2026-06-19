@@ -50,7 +50,7 @@ export function CourseCard({ course, variants, hoverVariants }: CourseCardProps)
         >
           {getIcon(course.icon_name)}
         </motion.div>
-        <h3 title={course.title} className="font-bold text-foreground text-[1.1rem] leading-tight mt-1 line-clamp-2">
+        <h3 title={course.title} className="font-bold text-foreground text-[1.1rem] leading-tight mt-1 line-clamp-2 flex-1 min-w-0 break-words">
           {course.title}
         </h3>
       </header>
@@ -63,12 +63,11 @@ export function CourseCard({ course, variants, hoverVariants }: CourseCardProps)
           </div>
           <div className="h-2.5 w-full rounded-sm bg-secondary/50 overflow-hidden shadow-inner">
             <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: course.progress ? course.progress / 100 : 0 }}
+              initial={{ width: "0%" }}
+              whileInView={{ width: `${course.progress ? course.progress : 0}%` }}
               viewport={{ once: true }}
               transition={{ type: "spring", stiffness: 50, damping: 15, delay: 0.1 }}
-              style={{ transformOrigin: "left" }}
-              className="h-full w-full rounded-sm bg-gradient-to-r from-primary to-purple-400 relative"
+              className="h-full rounded-sm bg-gradient-to-r from-primary to-purple-400 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-white/20 w-full h-full" style={{ backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent)', backgroundSize: '1rem 1rem' }} />
             </motion.div>

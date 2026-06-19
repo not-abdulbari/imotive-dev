@@ -4,7 +4,7 @@ A modern, responsive learning dashboard built with Next.js App Router, Tailwind 
 
 ## Architecture & Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Styling**: Tailwind CSS for utility-first styling with a custom dark theme and glowing gradients.
 - **Animations**: Framer Motion for performant, physics-based UI animations.
 - **Database**: Supabase (PostgreSQL) integrated with `@supabase/ssr` for secure server-side fetching.
@@ -40,7 +40,7 @@ The application strictly follows the React Server Components (RSC) paradigm to e
 ## Getting Started
 
 1. Copy `.env.example` to `.env.local` and add your Supabase credentials.
-2. Run the SQL migration located in `supabase/migrations/20260619000000_create_courses.sql` in your Supabase SQL Editor.
+2. Run the SQL migration located in `migrations/20260618000000_create_courses.sql` in your Supabase SQL Editor.
 3. Install dependencies: `npm install`
 4. Start the dev server: `npm run dev`
 
